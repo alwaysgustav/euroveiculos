@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+/* Zerando CSS */
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Fundo da Tela */
+html {
+  width: 100vw;
+  height: 100vh;
+  font-size: 62.5%;
+  font-family: "Lato", sans-serif;
+  color: white;
+}
+
+body {
+  background: linear-gradient(rgba(17, 17, 17, 0.2), rgba(20, 20, 20, 1)),
+    url(./img/1.png);
+  background-position: center/center;
+  background-size: cover;
+  background-position-y: 0px;
+  background-repeat: no-repeat;
+}
+
+/* Menu - Header - Navbar */
+header {
+  width: 100%;
+  height: 7vh;
+  background: rgba(22, 22, 22, 0.4);
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  margin-top: 35px;
+  margin-right: 900px;
+}
+
+.menu-content {
+  text-transform: uppercase;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.menu-content .list-itens {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.menu-content .list-itens a {
+  text-decoration: none;
+  color: white;
+  padding: 1.5rem;
+  transform: 2ms ease-in;
+  position: relative;
+}
+
+.menu-content .list-itens a:before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 0px;
+  height: 1px;
+  background-color: red;
+  transition: all 1.5s ease;
+}
+
+.menu-content .list-itens a:hover:before {
+  width: 100%;
+}
+
+.container {
+  max-width: 800px;
+  height: 460px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3rem;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 250px;
+  background-image: url(./img/hb20.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.3s;
+  left: 100px;
+  top: 100px;
+}
+
+.card:nth-child(2) {
+  background-image: url(./img/Onix.jpg);
+}
+
+.card:hover {
+  height: 316px;
+  transform: scale(1.1);
+}
+
+.card .circle {
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0px at center 0);
+  text-align: center;
+  background-color: red;
+  transition: 0.3s;
+}
+
+.card:nth-child(2) .circle {
+  background-color: blue;
+}
+
+.card:hover .circle {
+  clip-path: circle(130px at center 0);
+}
+
+.card .circle h2 {
+  color: #fff;
+  font-size: 3rem;
+  padding: 15px 0;
+}
